@@ -1,6 +1,4 @@
 // ==UserScript==
-// Modified by [Mory] — fixed GM API, unsafeWindow fetch patch, upload button visibility
-// FIX https://github.com/JustMory3/blue_marble_fix
 // @name         Blue Marble
 // @namespace    https://github.com/SwingTheVine/
 // @version      0.88.0
@@ -1834,6 +1832,11 @@
         creditSmall.style.marginTop = 'auto';
         bottomBar.appendChild(creditSmall);
 
+        const fixCredit = document.createElement('small');
+        fixCredit.textContent = 'Fixed by Mory';
+        fixCredit.style.cssText = 'margin-top: 2px; opacity: 0.7;';
+        bottomBar.appendChild(fixCredit);
+
         panelInner.appendChild(bottomBar);
         panel.appendChild(panelInner);
         document.body.appendChild(panel);
@@ -2037,6 +2040,4 @@
         (0, console.log)(`%c${SCRIPT_NAME}%c (${SCRIPT_VERSION}) loaded!`, 'color: cornflowerblue;', '');
     }
 
-
 })();
-
