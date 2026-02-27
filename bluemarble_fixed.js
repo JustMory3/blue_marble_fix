@@ -2036,4 +2036,5 @@
         (0, console.log)(`%c${SCRIPT_NAME}%c (${SCRIPT_VERSION}) loaded!`, 'color: cornflowerblue;', '');
     }
 
+
 })();
